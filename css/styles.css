@@ -234,6 +234,11 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
+.site-header.scrolled .header-logo-img {
+  height: 81px;
+  width: 81px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -247,13 +252,13 @@ img {
 }
 
 .header-logo-img {
-  height: 80px;
-  width: 80px;
-  border-radius: 12px;
+  height: 150px;
+  width: 150px;
+  border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all var(--transition-normal);
 }
 
 .header-logo-img:hover {
@@ -321,6 +326,13 @@ img {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .header-logo-img {
+    height: 95px;
+    width: 95px;
+  }
+}
+
 .mobile-toggle {
   display: none;
   background: none;
@@ -373,9 +385,15 @@ img {
    ========================================================================== */
 .hero-section {
   position: relative;
-  padding-top: 10.5rem;
+  padding-top: 12.5rem;
   padding-bottom: 6rem;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 9.5rem;
+  }
 }
 
 .hero-grid {
@@ -1058,12 +1076,38 @@ img {
 }
 
 .footer-logo-img {
-  height: 72px;
-  width: 72px;
-  border-radius: 12px;
+  height: 115px;
+  width: 115px;
+  border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  transition: all var(--transition-fast);
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .footer-brand-desc {

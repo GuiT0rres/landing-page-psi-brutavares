@@ -58,11 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-button').setAttribute('aria-expanded', 'false');
         }
-      });
+      }); 
 
       // Toggle clicked item
-      item.classList.toggle('active', !isActive);
+      const willOpen = !isActive;
+      item.classList.toggle('active', willOpen);
+      button.setAttribute('aria-expanded', willOpen);
     });
   });
 
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let message = "Olá, Psicólogo Bruno Tavares! Vim pelo seu site e gostaria de tirar dúvidas e consultar horários disponíveis para atendimento.";
     
     if (topic && topic.trim() !== "") {
-      message = `Olá, Psicólogo Bruno Tavares! Gostaria de mais informações sobre o tratamento de *${topic}* e consultar os horários para agendamento.`;
+      message = `Olá, Psicólogo Bruno Tavares! Gostaria de mais informações sobre o serviço de *${topic}* e consultar os horários para agendamento.`;
     }
     
     const encodedMessage = encodeURIComponent(message);
