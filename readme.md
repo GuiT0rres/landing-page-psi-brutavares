@@ -6,7 +6,7 @@ Este projeto foi desenvolvido como parte do **Projeto de Extensão Curricular (P
 
 ## Acesso Online (Deploy)
 
-O site está hospedado e disponibilizado publicamente através do **Cloudflare Workers**:
+O site está hospedado e disponibilizado publicamente através do **Cloudflare Worker**:
 
 - **Link de Acesso:** [Acesse o site aqui](https://landing-page-psi-brutavares.devguitorres.workers.dev/) 
 
